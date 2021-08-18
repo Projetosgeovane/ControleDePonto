@@ -1,13 +1,17 @@
 package com.dio.ponto.model;
 
 import lombok.*;
-import org.springframework.data.annotation.Id;
+
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode
 @Builder
+@Entity
 public class Empresa {
     @Id
     private Long id;

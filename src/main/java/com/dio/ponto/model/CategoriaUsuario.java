@@ -2,15 +2,21 @@ package com.dio.ponto.model;
 
 
 import lombok.*;
-import org.springframework.data.annotation.Id;
+import org.hibernate.envers.Audited;
+
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode
 @Builder
+@Entity
+@Audited
 public class CategoriaUsuario {
     @Id
-    private Long id;
-    private String descricao;
+    private long id;
+    private String desscricao;
 }

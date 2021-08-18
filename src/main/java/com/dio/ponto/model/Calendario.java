@@ -1,8 +1,10 @@
 package com.dio.ponto.model;
 
 import lombok.*;
-import org.springframework.data.annotation.Id;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import java.time.LocalDateTime;
 
 @Data
@@ -10,9 +12,11 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @EqualsAndHashCode
 @Builder
+@Entity
 public class Calendario {
     @Id
     private Long id;
+    @ManyToOne
     private TipoData tipoData;
     private String descricao;
     private LocalDateTime dataEspecial;
