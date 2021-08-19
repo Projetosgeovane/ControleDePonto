@@ -4,6 +4,7 @@ import com.dio.ponto.model.JornadaTrabalho;
 import com.dio.ponto.service.JornadaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -17,8 +18,7 @@ public class JornadaTrabalhoController {
     JornadaService jornadaService;
 
     @PostMapping
-    public JornadaTrabalho createJornada(@RequestBody JornadaTrabalho jornadaTrabalho) {
-
+    public JornadaTrabalho createJornada(@RequestBody JornadaTrabalho jornadaTrabalho){
         return jornadaService.saveJornada(jornadaTrabalho);
     }
 

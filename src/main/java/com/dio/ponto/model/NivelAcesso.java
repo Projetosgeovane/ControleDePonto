@@ -1,6 +1,7 @@
 package com.dio.ponto.model;
 
 import lombok.*;
+import org.hibernate.envers.Audited;
 
 import javax.persistence.Id;
 import javax.persistence.Entity;
@@ -11,6 +12,7 @@ import javax.persistence.Entity;
 @EqualsAndHashCode
 @Builder
 @Entity
+@Audited
 public class NivelAcesso {
     @Id
     private long id;

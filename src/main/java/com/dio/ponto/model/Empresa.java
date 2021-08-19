@@ -1,6 +1,7 @@
 package com.dio.ponto.model;
 
 import lombok.*;
+import org.hibernate.envers.Audited;
 
 
 import javax.persistence.Entity;
@@ -12,6 +13,7 @@ import javax.persistence.Id;
 @EqualsAndHashCode
 @Builder
 @Entity
+@Audited
 public class Empresa {
     @Id
     private Long id;
